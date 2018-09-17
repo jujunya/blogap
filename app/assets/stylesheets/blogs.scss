@@ -3,12 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-nav .nav-wrapper{
-  position: static;
-}
-
-nav .brand-logo{
-  position: static;
+.brand-logo-podition{
+  margin: 0 0 0 100px;
 }
 
 
@@ -42,4 +38,7 @@ nav .brand-logo{
 
 .blog_nickname{
   text-align: center;
+}
+.hide-on-med-and-down {
+  margin: 0 50px 0 0;
 }

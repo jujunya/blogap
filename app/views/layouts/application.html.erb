@@ -19,7 +19,9 @@
 <body>
   <nav class ="#4a148c purple darken-4">
     <div class="nav-wrapper">
-      <a href="/blogs" class="brand-logo">Blog</a>
+      <div class="brand-logo-podition">
+        <a href="/blogs" class="brand-logo ">Blog</a>
+      </div>
       <% if user_signed_in? %>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><%= link_to "SignOut", destroy_user_session_path, method: :delete %></li>
