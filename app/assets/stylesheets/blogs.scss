@@ -1,0 +1,45 @@
+// Place all the styles related to the blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+nav .nav-wrapper{
+  position: static;
+}
+
+nav .brand-logo{
+  position: static;
+}
+
+
+.contents{
+  margin-top: 100px;
+}
+
+.blog_box{
+  width: 900px;
+  margin: 50px auto;
+  box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+
+.blog_content{
+  margin: 0px 40px;
+  padding: 20px 0;
+}
+
+.blog_button{
+  margin: 0px 40px;
+  padding: 20px 0;
+}
+
+.blog_post{
+  width: 1000px;
+  margin: 50px auto;
+}
+.blog_send{
+  padding-top: 30px;
+}
+
+.blog_nickname{
+  text-align: center;
+}

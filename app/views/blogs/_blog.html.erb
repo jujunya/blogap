@@ -1,0 +1,16 @@
+<div class = blog_box>
+  <div class = blog_content>
+    <%= blog.content %><br>
+  </div>
+  <div class = blog_button>
+    <%= link_to "SHOW", blog_path(blog.id), class: "waves-effect waves-light btn" ,method: :get %>
+    <% if user_signed_in? && current_user.id == blog.user_id %>
+      <%= link_to "EDIT", "/blogs/#{blog.id}/edit" , class: "waves-effect waves-light btn" ,method: :get %>
+      <%= link_to "DESTORY", "/blogs/#{blog.id}", class: "waves-effect waves-light btn" ,
+           data: { confirm: "Are you sure?" } ,method: :delete %>
+    <% end %>
+  </div>
+</div>
+
+
+

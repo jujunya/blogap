@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blogap</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <style type="text/css" href="./style.css"></style>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class ="#4a148c purple darken-4">
+    <div class="nav-wrapper">
+      <a href="/blogs" class="brand-logo">Blog</a>
+      <% if user_signed_in? %>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><%= link_to "SignOut", destroy_user_session_path, method: :delete %></li>
+          <li><a href="/blogs/new">NEW</a></li>
+        </ul>
+      <% else %>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><%= link_to "SignIn", new_user_session_path, class: 'post' %></li>
+          <li><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
+        </ul>
+      <% end %>
+    </div>
+  </nav>
+
+  <%= yield %>
+
+</body>
+</html>

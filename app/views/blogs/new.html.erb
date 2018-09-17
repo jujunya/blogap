@@ -1,0 +1,14 @@
+<div class = blog_post>
+  <%= form_for(@blog, url: '/blogs') do |f| %>
+    
+     <div class="input-field col s12">
+      <%= f.label :text , "本文"%>
+      <%= f.text_area :content , class: "materialize-textarea"%>
+    </div>
+    
+    <div class = blog_send>
+      <%= f.submit "送信", class: "waves-effect waves-light btn" %>
+    </div>
+    
+  <% end %>
+</div>
